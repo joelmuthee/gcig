@@ -1,0 +1,12 @@
+# Cloudflare Pages deploy staging (built from index.html)
+dist/
+
+# Claude Code worktree / session junk
+.claude/
+
+# Wrangler
+.wrangler/
+
+# OS
+Thumbs.db
+.DS_Store
