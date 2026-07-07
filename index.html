@@ -209,6 +209,13 @@ h2{
   max-width:620px;margin:0 auto;text-align:center;color:var(--ink-soft);font-size:.98rem;
 }
 
+/* contact form */
+.form-card{
+  max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  border-radius:20px;padding:14px;box-shadow:0 22px 48px -30px rgba(29,43,35,.32);
+}
+.form-card iframe{display:block;width:100%;min-height:640px;border:none;border-radius:12px}
+
 /* footer */
 footer{background:var(--ink);color:rgba(242,237,225,.75);padding:56px 0 34px}
 .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:44px;margin-bottom:40px}
@@ -273,6 +280,7 @@ footer a:hover{color:var(--amber-soft)}
       <a href="#leadership">Leadership</a>
       <a href="#governance">Accountability</a>
       <a href="#join">Get involved</a>
+      <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#join">Join us</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
@@ -465,7 +473,36 @@ footer a:hover{color:var(--amber-soft)}
           <p>Awarded by the organization to people and organizations it wishes to honour for their service.</p>
         </div>
       </div>
-      <p class="join-note reveal">Want to join, partner or support a programme? Call us on <a href="tel:+254722967058" style="color:var(--green);font-weight:700">0722 967 058</a> or <a href="tel:+254720615606" style="color:var(--green);font-weight:700">0720 615 606</a>, visit our office in Ngong, Kajiado County, or find us on <a href="https://www.facebook.com/p/Global-Community-Initiative-For-Growth-GCIG-61567228138108/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Facebook</a>.</p>
+      <p class="join-note reveal">Want to join, partner or support a programme? Call us on <a href="tel:+254722967058" style="color:var(--green);font-weight:700">0722 967 058</a> or <a href="tel:+254720615606" style="color:var(--green);font-weight:700">0720 615 606</a>, visit our office in Ngong, Kajiado County, find us on <a href="https://www.facebook.com/p/Global-Community-Initiative-For-Growth-GCIG-61567228138108/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Facebook</a>, or send us a message below.</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="wrap">
+      <div class="sec-head center reveal">
+        <span class="kicker" style="justify-content:center">Contact</span>
+        <h2>Send us a message</h2>
+        <p>Membership, volunteering, partnerships or a general question. Fill in the form and we'll get back to you.</p>
+      </div>
+      <div class="form-card reveal">
+        <iframe
+          src="https://api.leadconnectorhq.com/widget/form/AWCNxp3Ilwn9TmkN2mIq"
+          id="inline-AWCNxp3Ilwn9TmkN2mIq"
+          data-layout="{'id':'INLINE'}"
+          data-trigger-type="alwaysShow"
+          data-trigger-value=""
+          data-activation-type="alwaysActivated"
+          data-activation-value=""
+          data-deactivation-type="neverDeactivate"
+          data-deactivation-value=""
+          data-form-name="GCIG NGO Form"
+          data-height="640"
+          data-layout-iframe-id="inline-AWCNxp3Ilwn9TmkN2mIq"
+          data-form-id="AWCNxp3Ilwn9TmkN2mIq"
+          title="GCIG NGO Form">
+        </iframe>
+      </div>
     </div>
   </section>
 
@@ -485,6 +522,7 @@ footer a:hover{color:var(--amber-soft)}
         <a href="#work">What we do</a>
         <a href="#leadership">Leadership</a>
         <a href="#governance">Accountability</a>
+        <a href="#contact">Contact</a>
       </div>
       <div>
         <h5>Contact</h5>
@@ -501,6 +539,7 @@ footer a:hover{color:var(--amber-soft)}
   </div>
 </footer>
 
+<script src="https://link.msgsndr.com/js/form_embed.js"></script>
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
 
