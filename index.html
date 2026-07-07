@@ -155,6 +155,13 @@ h2{
   transform:scaleX(0);transform-origin:left;transition:transform .3s;
 }
 .prog:hover::before{transform:scaleX(1)}
+.prog-featured{border-color:var(--green)}
+.prog-featured::before{transform:scaleX(1)}
+.focus-badge{
+  position:absolute;top:22px;right:22px;background:var(--amber-soft);color:var(--green-deep);
+  font-size:.68rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;
+  padding:5px 12px;border-radius:999px;
+}
 .prog-icon{
   width:52px;height:52px;border-radius:14px 14px 14px 3px;display:flex;align-items:center;justify-content:center;
   background:var(--paper-deep);margin-bottom:20px;font-size:1.4rem;
@@ -295,7 +302,7 @@ footer a:hover{color:var(--amber-soft)}
       <div>
         <span class="kicker">Kenya · Non-governmental organization</span>
         <h1>Growth that reaches <em>every</em> community.</h1>
-        <p class="lead">GCIG supports communities, learners, women, youth, children, the elderly and persons with disabilities across Kenya. We open doors to education, opportunity and dignity for the people who need it most.</p>
+        <p class="lead">GCIG's main work is supporting persons with disabilities, alongside communities, learners, women, youth, children and the elderly across Kenya. We open doors to education, opportunity and dignity for the people who need it most.</p>
         <div class="btn-row">
           <a class="btn primary" href="#work">See our work</a>
           <a class="btn ghost" href="#join">Get in touch</a>
@@ -325,7 +332,7 @@ footer a:hover{color:var(--amber-soft)}
           <span class="mission-num">01</span>
           <div>
             <h4>Support the disadvantaged</h4>
-            <p>Practical support for communities, persons with disabilities, women, youth, children, the elderly and other disadvantaged groups.</p>
+            <p>Practical support for persons with disabilities, communities, women, youth, children, the elderly and other disadvantaged groups.</p>
           </div>
         </div>
         <div class="mission-item reveal">
@@ -355,6 +362,12 @@ footer a:hover{color:var(--amber-soft)}
         <p>Six areas of work, all drawn from the objects in our constitution.</p>
       </div>
       <div class="prog-grid">
+        <div class="prog prog-featured reveal">
+          <span class="focus-badge">Core focus</span>
+          <div class="prog-icon">♿</div>
+          <h3>Disability inclusion</h3>
+          <p>Our main area of work. Assistive devices and technologies for people with disabilities, education support for learners with disabilities and special needs, and help accessing training and work.</p>
+        </div>
         <div class="prog reveal">
           <div class="prog-icon">📚</div>
           <h3>Education support</h3>
@@ -364,11 +377,6 @@ footer a:hover{color:var(--amber-soft)}
           <div class="prog-icon">🧒</div>
           <h3>Children and the elderly</h3>
           <p>Food, clothing and medical care for orphaned children caring for their families and for needy elderly persons, plus support for children's homes and family tracing for vulnerable children.</p>
-        </div>
-        <div class="prog reveal">
-          <div class="prog-icon">♿</div>
-          <h3>Disability inclusion</h3>
-          <p>Assistive devices and technologies for people with disabilities, and education support for learners with disabilities and special needs.</p>
         </div>
         <div class="prog reveal">
           <div class="prog-icon">🌱</div>
