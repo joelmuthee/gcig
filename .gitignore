@@ -7,6 +7,10 @@ dist/
 # Wrangler
 .wrangler/
 
+# Source photo working folder (originals + full-res enhanced). The web-optimized
+# curated set lives in assets/gallery/ and is tracked. Kept out to keep repo lean.
+images/
+
 # OS
 Thumbs.db
 .DS_Store
