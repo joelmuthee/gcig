@@ -197,21 +197,19 @@ h2{
 .gov h4{font-size:1.05rem;margin-bottom:8px}
 .gov p{font-size:.94rem;color:var(--ink-soft)}
 
-/* join */
+/* join + contact */
 .join{background:var(--paper-deep);border-top:1px solid var(--line)}
-.join-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-bottom:44px}
+.join-contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+.join-grid{display:grid;gap:16px;margin-bottom:24px}
 .join-card{
-  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:28px 26px;text-align:left;
+  background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;text-align:left;
 }
-.join-card h3{font-family:var(--font-display);font-size:1.2rem;font-weight:600;margin-bottom:10px;color:var(--green)}
-.join-card p{font-size:.94rem;color:var(--ink-soft)}
-.join-note{
-  max-width:620px;margin:0 auto;text-align:center;color:var(--ink-soft);font-size:.98rem;
-}
+.join-card h3{font-family:var(--font-display);font-size:1.15rem;font-weight:600;margin-bottom:8px;color:var(--green)}
+.join-card p{font-size:.93rem;color:var(--ink-soft)}
+.join-note{color:var(--ink-soft);font-size:.96rem}
 
-/* contact form */
 .form-card{
-  max-width:680px;margin:0 auto;background:#fff;border:1px solid var(--line);
+  background:#fff;border:1px solid var(--line);
   border-radius:20px;padding:14px;box-shadow:0 22px 48px -30px rgba(29,43,35,.32);
 }
 .form-card iframe{display:block;width:100%;min-height:640px;border:none;border-radius:12px;background:#fff}
@@ -237,7 +235,7 @@ footer a:hover{color:var(--amber-soft)}
   .about .wrap{grid-template-columns:1fr;gap:44px}
   .prog-grid{grid-template-columns:repeat(2,1fr)}
   .people-grid{grid-template-columns:repeat(2,1fr)}
-  .join-grid{grid-template-columns:1fr}
+  .join-contact-grid{grid-template-columns:1fr;gap:32px}
   .gov-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr 1fr}
   nav.links{
@@ -279,7 +277,6 @@ footer a:hover{color:var(--amber-soft)}
       <a href="#leadership">Leadership</a>
       <a href="#governance">Accountability</a>
       <a href="#join">Get involved</a>
-      <a href="#contact">Contact</a>
     </nav>
     <a class="nav-cta" href="#join">Join us</a>
     <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
@@ -301,7 +298,7 @@ footer a:hover{color:var(--amber-soft)}
         <p class="lead">GCIG supports communities, learners, women, youth, children, the elderly and persons with disabilities across Kenya. We open doors to education, opportunity and dignity for the people who need it most.</p>
         <div class="btn-row">
           <a class="btn primary" href="#work">See our work</a>
-          <a class="btn ghost" href="#contact">Get in touch</a>
+          <a class="btn ghost" href="#join">Get in touch</a>
         </div>
       </div>
       <aside class="hero-card reveal">
@@ -449,57 +446,50 @@ footer a:hover{color:var(--amber-soft)}
     </div>
   </section>
 
-  <!-- JOIN -->
+  <!-- JOIN / CONTACT -->
   <section class="join" id="join">
     <div class="wrap">
       <div class="sec-head center reveal">
         <span class="kicker" style="justify-content:center">Get involved</span>
-        <h2>Stand with your community</h2>
-        <p>GCIG is a membership organization. There are three ways to join.</p>
+        <h2>Join us, or just say hello</h2>
+        <p>Membership, partnerships, volunteering or a general question. Here's how to reach us.</p>
       </div>
-      <div class="join-grid">
-        <div class="join-card reveal">
-          <h3>Ordinary membership</h3>
-          <p>For individuals who want to be part of the work. Every application is proposed and seconded by existing members and decided by the Board.</p>
+      <div class="join-contact-grid">
+        <div class="join-info reveal">
+          <div class="join-grid">
+            <div class="join-card">
+              <h3>Ordinary membership</h3>
+              <p>For individuals who want to be part of the work. Every application is proposed and seconded by existing members and decided by the Board.</p>
+            </div>
+            <div class="join-card">
+              <h3>Corporate membership</h3>
+              <p>Open to any association, institution or business interested in supporting and furthering the aims of the organization.</p>
+            </div>
+            <div class="join-card">
+              <h3>Honorary membership</h3>
+              <p>Awarded by the organization to people and organizations it wishes to honour for their service.</p>
+            </div>
+          </div>
+          <p class="join-note">Prefer to talk? Call us on <a href="tel:+254722967058" style="color:var(--green);font-weight:700">0722 967 058</a> or <a href="tel:+254720615606" style="color:var(--green);font-weight:700">0720 615 606</a>, visit our office in Ngong, Kajiado County, or find us on <a href="https://www.facebook.com/p/Global-Community-Initiative-For-Growth-GCIG-61567228138108/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Facebook</a>.</p>
         </div>
-        <div class="join-card reveal">
-          <h3>Corporate membership</h3>
-          <p>Open to any association, institution or business interested in supporting and furthering the aims of the organization.</p>
+        <div class="form-card reveal">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/AWCNxp3Ilwn9TmkN2mIq"
+            id="inline-AWCNxp3Ilwn9TmkN2mIq"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="GCIG NGO Form"
+            data-height="640"
+            data-layout-iframe-id="inline-AWCNxp3Ilwn9TmkN2mIq"
+            data-form-id="AWCNxp3Ilwn9TmkN2mIq"
+            title="GCIG NGO Form">
+          </iframe>
         </div>
-        <div class="join-card reveal">
-          <h3>Honorary membership</h3>
-          <p>Awarded by the organization to people and organizations it wishes to honour for their service.</p>
-        </div>
-      </div>
-      <p class="join-note reveal">Want to join, partner or support a programme? Call us on <a href="tel:+254722967058" style="color:var(--green);font-weight:700">0722 967 058</a> or <a href="tel:+254720615606" style="color:var(--green);font-weight:700">0720 615 606</a>, visit our office in Ngong, Kajiado County, find us on <a href="https://www.facebook.com/p/Global-Community-Initiative-For-Growth-GCIG-61567228138108/" target="_blank" rel="noopener" style="color:var(--green);font-weight:700">Facebook</a>, or send us a message below.</p>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact">
-    <div class="wrap">
-      <div class="sec-head center reveal">
-        <span class="kicker" style="justify-content:center">Contact</span>
-        <h2>Send us a message</h2>
-        <p>Membership, volunteering, partnerships or a general question. Fill in the form and we'll get back to you.</p>
-      </div>
-      <div class="form-card reveal">
-        <iframe
-          src="https://api.leadconnectorhq.com/widget/form/AWCNxp3Ilwn9TmkN2mIq"
-          id="inline-AWCNxp3Ilwn9TmkN2mIq"
-          data-layout="{'id':'INLINE'}"
-          data-trigger-type="alwaysShow"
-          data-trigger-value=""
-          data-activation-type="alwaysActivated"
-          data-activation-value=""
-          data-deactivation-type="neverDeactivate"
-          data-deactivation-value=""
-          data-form-name="GCIG NGO Form"
-          data-height="640"
-          data-layout-iframe-id="inline-AWCNxp3Ilwn9TmkN2mIq"
-          data-form-id="AWCNxp3Ilwn9TmkN2mIq"
-          title="GCIG NGO Form">
-        </iframe>
       </div>
     </div>
   </section>
@@ -520,7 +510,7 @@ footer a:hover{color:var(--amber-soft)}
         <a href="#work">What we do</a>
         <a href="#leadership">Leadership</a>
         <a href="#governance">Accountability</a>
-        <a href="#contact">Contact</a>
+        <a href="#join">Get involved</a>
       </div>
       <div>
         <h5>Contact</h5>
