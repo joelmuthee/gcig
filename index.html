@@ -235,6 +235,9 @@ h2{
 .lightbox.open{display:flex}
 .lightbox img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
 .lightbox .lb-close{position:absolute;top:16px;right:24px;color:#fff;font-size:2.2rem;line-height:1;background:none;border:0;cursor:pointer}
+.gallery figure.extra{display:none}
+.gallery.expanded figure.extra{display:block}
+.gallery-more{text-align:center;margin-top:28px}
 @media(max-width:1000px){.gallery{columns:3}}
 @media(max-width:680px){.gallery{columns:2;column-gap:12px}.gallery figure{margin-bottom:12px}}
 
@@ -456,6 +459,21 @@ footer a:hover{color:var(--amber-soft)}
         <figure><img src="assets/gallery/g12.jpg" loading="lazy" alt="An outdoor community meeting under a tree"></figure>
         <figure><img src="assets/gallery/g06.jpg" loading="lazy" alt="Fresh oranges shared as part of GCIG food support"></figure>
         <figure><img src="assets/gallery/g10.jpg" loading="lazy" alt="GCIG volunteers ready to serve at a community event"></figure>
+        <figure class="extra"><img src="assets/gallery/g13.jpg" loading="lazy" alt="Support for an elderly community member with a mobility aid"></figure>
+        <figure class="extra"><img src="assets/gallery/g14.jpg" loading="lazy" alt="Sharing a meal together at a GCIG event"></figure>
+        <figure class="extra"><img src="assets/gallery/g15.jpg" loading="lazy" alt="A talk during a GCIG community programme"></figure>
+        <figure class="extra"><img src="assets/gallery/g16.jpg" loading="lazy" alt="A father and child smiling at a GCIG gathering"></figure>
+        <figure class="extra"><img src="assets/gallery/g17.jpg" loading="lazy" alt="A mother and child at a GCIG event"></figure>
+        <figure class="extra"><img src="assets/gallery/g18.jpg" loading="lazy" alt="A mother carrying her child outside a GCIG venue"></figure>
+        <figure class="extra"><img src="assets/gallery/g19.jpg" loading="lazy" alt="A celebration with cake at a GCIG event"></figure>
+        <figure class="extra"><img src="assets/gallery/g20.jpg" loading="lazy" alt="Preparing food outdoors for the community"></figure>
+        <figure class="extra"><img src="assets/gallery/g21.jpg" loading="lazy" alt="Handing over donated supplies to the community"></figure>
+        <figure class="extra"><img src="assets/gallery/g22.jpg" loading="lazy" alt="Families receiving support indoors at a GCIG event"></figure>
+        <figure class="extra"><img src="assets/gallery/g23.jpg" loading="lazy" alt="Community members together at a GCIG gathering"></figure>
+        <figure class="extra"><img src="assets/gallery/g24.jpg" loading="lazy" alt="Sorting donated clothes at a GCIG clothing drive"></figure>
+      </div>
+      <div class="gallery-more">
+        <button class="btn ghost" id="galMore" aria-expanded="false">View more photos</button>
       </div>
     </div>
   </section>
@@ -630,6 +648,17 @@ document.querySelectorAll('.gallery img').forEach(function(img){
 function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
 lb.addEventListener('click', closeLb);
 document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ closeLb(); } });
+
+// Gallery "view more" toggle
+var galMore = document.getElementById('galMore');
+if(galMore){
+  galMore.addEventListener('click', function(){
+    var gal = document.querySelector('.gallery');
+    var open = gal.classList.toggle('expanded');
+    galMore.textContent = open ? 'Show fewer photos' : 'View more photos';
+    galMore.setAttribute('aria-expanded', open);
+  });
+}
 
 if(!window.matchMedia('(prefers-reduced-motion: reduce)').matches){
   var io = new IntersectionObserver(function(entries){
