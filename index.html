@@ -278,9 +278,12 @@ h2{
 
 .form-card{
   background:var(--paper);border:1px solid var(--line);
-  border-radius:20px;padding:18px 30px;box-shadow:0 22px 48px -30px rgba(29,43,35,.32);
+  border-radius:20px;padding:18px 30px 8px;box-shadow:0 22px 48px -30px rgba(29,43,35,.32);
 }
-.form-card iframe{display:block;width:100%;min-height:640px;border:none;border-radius:8px;background:var(--paper)}
+/* 620px is the GHL form's actual content height (Submit ends at 592px). The old
+   640px floor left dead space below the button. Inline height set by GHL's
+   form_embed.js (if it fires) still wins over this. */
+.form-card iframe{display:block;width:100%;min-height:620px;border:none;border-radius:8px;background:var(--paper)}
 
 /* footer */
 footer{background:var(--ink);color:rgba(242,237,225,.75);padding:56px 0 34px}
@@ -344,7 +347,7 @@ footer a:hover{color:var(--amber-soft)}
   .hero-card{padding:30px 24px}
   .mission-item{padding:20px}
   .join-card{padding:24px 22px}
-  .form-card{padding:12px 8px}
+  .form-card{padding:12px 8px 6px}
 }
 
 </style>
