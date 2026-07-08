@@ -12,7 +12,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Global Community Initiative for Growth (GCIG) · Ngong, Kajiado County</title>
+<title>Global Community Initiative for Growth (GCIG) · Kenya</title>
 <meta name="description" content="GCIG is a Kenyan non-governmental organization supporting communities, learners, women, youth, children, the elderly and persons with disabilities across Kenya.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://gcigkenya.org/">
@@ -28,6 +28,29 @@
 <meta name="twitter:description" content="A Kenyan NGO supporting communities through education, empowerment and care for the people who need it most.">
 <meta name="twitter:image" content="https://gcigkenya.org/assets/logo.png">
 <link rel="icon" type="image/png" href="assets/favicon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NGO",
+  "name": "Global Community Initiative for Growth (GCIG)",
+  "alternateName": "GCIG",
+  "url": "https://gcigkenya.org/",
+  "logo": "https://gcigkenya.org/assets/logo.png",
+  "description": "A Kenyan non-governmental organization supporting persons with disabilities, communities, learners, women, youth, children and the elderly across Kenya.",
+  "telephone": "+254722967058",
+  "sameAs": ["https://www.facebook.com/p/Global-Community-Initiative-For-Growth-GCIG-61567228138108/"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Ngong",
+    "addressRegion": "Kajiado County",
+    "addressCountry": "KE"
+  },
+  "contactPoint": [
+    {"@type": "ContactPoint", "telephone": "+254722967058", "contactType": "customer service"},
+    {"@type": "ContactPoint", "telephone": "+254720615606", "contactType": "customer service"}
+  ]
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -41,7 +64,7 @@
   --green-deep:#143f2d;
   --amber:#d9821f;
   --amber-soft:#f0b45c;
-  --clay:#c05b2e;
+  --clay:#ac5129;
   --line:rgba(29,43,35,.14);
   --radius:18px;
   --font-display:"Fraunces",Georgia,serif;
@@ -71,8 +94,6 @@ header{
 .nav{display:flex;align-items:center;justify-content:space-between;height:92px}
 .brand{display:flex;align-items:center;gap:12px;text-decoration:none}
 .brand-mark{height:64px;width:auto;flex:none;display:block}
-.brand b{font-family:var(--font-display);font-size:1.15rem;font-weight:600;letter-spacing:.01em}
-.brand small{display:block;font-size:.68rem;color:var(--ink-soft);letter-spacing:.14em;text-transform:uppercase}
 nav.links{display:flex;gap:28px}
 nav.links a{
   text-decoration:none;font-weight:600;font-size:.92rem;color:var(--ink-soft);
@@ -225,21 +246,24 @@ h2{
 
 /* gallery */
 .gallery-sec{background:var(--paper-deep);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
-.gallery{columns:4;column-gap:16px}
-.gallery figure{break-inside:avoid;margin:0 0 16px;border-radius:14px;overflow:hidden;position:relative;cursor:zoom-in;border:1px solid var(--line);background:#fff;box-shadow:0 12px 30px -22px rgba(29,43,35,.45)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;align-items:start}
+.gallery figure{margin:0;border-radius:14px;overflow:hidden;position:relative;border:1px solid var(--line);background:#fff;box-shadow:0 12px 30px -22px rgba(29,43,35,.45)}
+.gal-btn{display:block;width:100%;padding:0;margin:0;border:0;background:none;cursor:zoom-in;font:inherit}
+.gal-btn:focus-visible{outline:3px solid var(--amber);outline-offset:-3px}
 .gallery img{display:block;width:100%;height:auto;transition:transform .45s cubic-bezier(.22,.61,.36,1)}
-.gallery figure:hover img{transform:scale(1.05)}
+.gal-btn:hover img,.gal-btn:focus-visible img{transform:scale(1.05)}
 .gallery figure::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,63,45,.22),transparent 42%);opacity:0;transition:opacity .3s;pointer-events:none}
-.gallery figure:hover::after{opacity:1}
+.gallery figure:has(.gal-btn:hover,.gal-btn:focus-visible)::after{opacity:1}
 .lightbox{position:fixed;inset:0;z-index:200;background:rgba(20,43,35,.92);display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
 .lightbox.open{display:flex}
 .lightbox img{max-width:100%;max-height:100%;border-radius:10px;box-shadow:0 30px 80px -20px rgba(0,0,0,.6)}
 .lightbox .lb-close{position:absolute;top:16px;right:24px;color:#fff;font-size:2.2rem;line-height:1;background:none;border:0;cursor:pointer}
+.lightbox .lb-close:focus-visible{outline:3px solid var(--amber-soft);outline-offset:2px}
 .gallery figure.extra{display:none}
 .gallery.expanded figure.extra{display:block}
 .gallery-more{text-align:center;margin-top:28px}
-@media(max-width:1000px){.gallery{columns:3}}
-@media(max-width:680px){.gallery{columns:2;column-gap:12px}.gallery figure{margin-bottom:12px}}
+@media(max-width:1000px){.gallery{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:680px){.gallery{grid-template-columns:repeat(2,1fr);gap:12px}}
 
 /* join + contact */
 .join{background:var(--paper-deep);border-top:1px solid var(--line)}
@@ -315,7 +339,6 @@ footer a:hover{color:var(--amber-soft)}
   .people-grid{grid-template-columns:1fr}
   .foot-grid{grid-template-columns:1fr}
   .chair-card{grid-template-columns:1fr;text-align:left}
-  .brand small{display:none}
   .btn-row{flex-direction:column;align-items:stretch}
   .btn{text-align:center}
   .hero-card{padding:30px 24px}
@@ -323,6 +346,7 @@ footer a:hover{color:var(--amber-soft)}
   .join-card{padding:24px 22px}
   .form-card{padding:12px 8px}
 }
+
 </style>
 </head>
 <body>
@@ -461,30 +485,30 @@ footer a:hover{color:var(--amber-soft)}
         <p>Real moments from our community programmes across Kenya, from standing with persons with disabilities to food, clothing and support for families.</p>
       </div>
       <div class="gallery reveal">
-        <figure><img src="assets/gallery/g03.jpg" loading="lazy" alt="A GCIG visit with a young person using a wheelchair"></figure>
-        <figure><img src="assets/gallery/g08.jpg" loading="lazy" alt="Serving a hot meal to children at a GCIG event"></figure>
-        <figure><img src="assets/gallery/g05.jpg" loading="lazy" alt="Handing out support packages to community members"></figure>
-        <figure><img src="assets/gallery/g02.jpg" loading="lazy" alt="An elderly woman and a mother with a child receiving a gift"></figure>
-        <figure><img src="assets/gallery/g11.jpg" loading="lazy" alt="Sorting donated clothes at a GCIG clothing drive"></figure>
-        <figure><img src="assets/gallery/g07.jpg" loading="lazy" alt="A community gathering at a GCIG event"></figure>
-        <figure><img src="assets/gallery/g01.jpg" loading="lazy" alt="A mother holding her child at a GCIG event"></figure>
-        <figure><img src="assets/gallery/g09.jpg" loading="lazy" alt="Dishing out food during a GCIG relief programme"></figure>
-        <figure><img src="assets/gallery/g04.jpg" loading="lazy" alt="Community members, including people using crutches, at a GCIG meeting"></figure>
-        <figure><img src="assets/gallery/g12.jpg" loading="lazy" alt="An outdoor community meeting under a tree"></figure>
-        <figure><img src="assets/gallery/g06.jpg" loading="lazy" alt="Fresh oranges shared as part of GCIG food support"></figure>
-        <figure><img src="assets/gallery/g10.jpg" loading="lazy" alt="GCIG volunteers ready to serve at a community event"></figure>
-        <figure class="extra"><img src="assets/gallery/g13.jpg" loading="lazy" alt="Support for an elderly community member with a mobility aid"></figure>
-        <figure class="extra"><img src="assets/gallery/g14.jpg" loading="lazy" alt="Sharing a meal together at a GCIG event"></figure>
-        <figure class="extra"><img src="assets/gallery/g15.jpg" loading="lazy" alt="A talk during a GCIG community programme"></figure>
-        <figure class="extra"><img src="assets/gallery/g16.jpg" loading="lazy" alt="A father and child smiling at a GCIG gathering"></figure>
-        <figure class="extra"><img src="assets/gallery/g17.jpg" loading="lazy" alt="A mother and child at a GCIG event"></figure>
-        <figure class="extra"><img src="assets/gallery/g18.jpg" loading="lazy" alt="A mother carrying her child outside a GCIG venue"></figure>
-        <figure class="extra"><img src="assets/gallery/g19.jpg" loading="lazy" alt="A celebration with cake at a GCIG event"></figure>
-        <figure class="extra"><img src="assets/gallery/g20.jpg" loading="lazy" alt="Preparing food outdoors for the community"></figure>
-        <figure class="extra"><img src="assets/gallery/g21.jpg" loading="lazy" alt="Handing over donated supplies to the community"></figure>
-        <figure class="extra"><img src="assets/gallery/g22.jpg" loading="lazy" alt="Families receiving support indoors at a GCIG event"></figure>
-        <figure class="extra"><img src="assets/gallery/g23.jpg" loading="lazy" alt="Community members together at a GCIG gathering"></figure>
-        <figure class="extra"><img src="assets/gallery/g24.jpg" loading="lazy" alt="Sorting donated clothes at a GCIG clothing drive"></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g03.jpg" loading="lazy" width="631" height="1400" alt="A GCIG visit with a young person using a wheelchair"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g08.jpg" loading="lazy" width="1054" height="1400" alt="Serving a hot meal to children at a GCIG event"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g05.jpg" loading="lazy" width="1054" height="1400" alt="Handing out support packages to community members"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g02.jpg" loading="lazy" width="1054" height="1400" alt="An elderly woman and a mother with a child receiving a gift"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g11.jpg" loading="lazy" width="1053" height="1400" alt="Volunteers sorting a large pile of donated clothes at a GCIG clothing drive"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g07.jpg" loading="lazy" width="1400" height="1054" alt="A community gathering at a GCIG event"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g01.jpg" loading="lazy" width="631" height="1400" alt="A mother holding her child at a GCIG event"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g09.jpg" loading="lazy" width="1053" height="1400" alt="Dishing out food during a GCIG relief programme"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g04.jpg" loading="lazy" width="1054" height="1400" alt="Community members, including people using crutches, at a GCIG meeting"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g12.jpg" loading="lazy" width="1400" height="1053" alt="An outdoor community meeting under a tree"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g06.jpg" loading="lazy" width="1054" height="1400" alt="Fresh oranges shared as part of GCIG food support"></button></figure>
+        <figure><button class="gal-btn" type="button"><img src="assets/gallery/g10.jpg" loading="lazy" width="1053" height="1400" alt="GCIG volunteers ready to serve at a community event"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g13.jpg" loading="lazy" width="617" height="1400" alt="Support for an elderly community member with a mobility aid"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g14.jpg" loading="lazy" width="1054" height="1400" alt="Sharing a meal together at a GCIG event"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g15.jpg" loading="lazy" width="1400" height="1054" alt="A talk during a GCIG community programme"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g16.jpg" loading="lazy" width="1054" height="1400" alt="A father and child smiling at a GCIG gathering"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g17.jpg" loading="lazy" width="631" height="1400" alt="A mother and child at a GCIG event"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g18.jpg" loading="lazy" width="631" height="1400" alt="A mother carrying her child outside a GCIG venue"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g19.jpg" loading="lazy" width="1054" height="1400" alt="A celebration with cake at a GCIG event"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g20.jpg" loading="lazy" width="1400" height="1054" alt="Preparing food outdoors for the community"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g21.jpg" loading="lazy" width="1400" height="1054" alt="Handing over donated supplies to the community"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g22.jpg" loading="lazy" width="1400" height="1233" alt="Families receiving support indoors at a GCIG event"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g23.jpg" loading="lazy" width="1400" height="1149" alt="Community members together at a GCIG gathering"></button></figure>
+        <figure class="extra"><button class="gal-btn" type="button"><img src="assets/gallery/g24.jpg" loading="lazy" width="1053" height="1400" alt="A volunteer smiling with a bundle of clothes he picked out at the drive"></button></figure>
       </div>
       <div class="gallery-more">
         <button class="btn ghost" id="galMore" aria-expanded="false">View more photos</button>
@@ -671,15 +695,27 @@ toTop.addEventListener('click', function(){
 // Gallery lightbox
 var lb = document.getElementById('lightbox');
 var lbImg = document.getElementById('lbImg');
-document.querySelectorAll('.gallery img').forEach(function(img){
-  img.addEventListener('click', function(){
+var lbCloseBtn = document.getElementById('lbClose');
+var lastFocused = null;
+document.querySelectorAll('.gal-btn').forEach(function(btn){
+  btn.addEventListener('click', function(){
+    var img = btn.querySelector('img');
+    lastFocused = btn;
     lbImg.src = img.src; lbImg.alt = img.alt;
     lb.classList.add('open'); document.body.style.overflow = 'hidden';
+    lbCloseBtn.focus();
   });
 });
-function closeLb(){ lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = ''; }
-lb.addEventListener('click', closeLb);
-document.addEventListener('keydown', function(e){ if(e.key === 'Escape' && lb.classList.contains('open')){ closeLb(); } });
+function closeLb(){
+  lb.classList.remove('open'); document.body.style.overflow = ''; lbImg.src = '';
+  if(lastFocused){ lastFocused.focus(); lastFocused = null; }
+}
+lb.addEventListener('click', function(e){ if(e.target === lb || e.target === lbImg){ closeLb(); } });
+document.addEventListener('keydown', function(e){
+  if(!lb.classList.contains('open')) return;
+  if(e.key === 'Escape'){ closeLb(); }
+  if(e.key === 'Tab'){ e.preventDefault(); lbCloseBtn.focus(); }
+});
 
 // Gallery "view more" toggle
 var galMore = document.getElementById('galMore');
